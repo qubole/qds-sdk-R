@@ -36,12 +36,4 @@ quboleHiveCommand<-function(...){
   
     cat(results)
 }
-#python.exec("from qds_sdk.qubole import Qubole") 
-#python.exec("from qds_sdk.commands import *")
-#python.exec("Qubole.configure(api_token='7qpdaKMjWH4RzvsqGyG1ygcafqgBzsxr2d2ykz7SsBgTtY7cSs4uG9YdaBHHZWsU')")
-#python.exec("hc = HiveCommand.run(query='show tables')")
-#python.exec("hc.get_results()")
 
-#Get the variable
-#status <- python.get("status")
-#cat(status)
