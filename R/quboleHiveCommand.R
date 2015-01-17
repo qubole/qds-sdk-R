@@ -28,11 +28,11 @@ library(rPython)
 #quboleHiveCommand<-function(query=NULL, script_location=NULL, macros=NULL , tags=NULL, sample_size=NULL, cluster_label=NULL, notify=NULL, name=NULL, poll_interval=15,api_token=NULL, )
 quboleHiveCommand<-function(...){ 
     
-    python.load(file.path(find.package("qdssdkr"),"exec","r-python.py" ))
+    rPython::python.load(file.path(find.package("qdssdkr"),"exec","r-python.py" ))
     
     #results<-python.call("hivecommand_from_r", query, script_location, macros , tags, sample_size, cluster_label, notify, name, poll_interval, api_token)
     
-    results<-python.call("hivecommand_from_r",...)
+    results<-rPython::python.call("hivecommand_from_r",...)
   
     cat(results)
 }
