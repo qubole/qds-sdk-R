@@ -10,3 +10,7 @@ Depends : R(>= 3.1.2), rPython (>= 0.0-5)
 Description: A wrapper function written in R and Python to launch a hivequery on qds using qds python sdk
 License: Apache
 LazyData: true
+Collate:
+    'quboleHiveCommand.R'
+    'qds.sdk.R.R'
+    
