@@ -23,6 +23,7 @@ In R
 Usage:
 ------
 In R
+
     library(qdssdkr)
     results<-qds.sdk.R::quboleHiveCommand(query="sample query")
 
