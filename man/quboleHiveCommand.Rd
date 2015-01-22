@@ -4,7 +4,9 @@
 \alias{quboleHiveCommand}
 \title{calls hivecommand_from_r and return the result}
 \usage{
-quboleHiveCommand(...)
+quboleHiveCommand(query = NULL, poll_interval = NULL, sample_size = NULL,
+  macros = NULL, tags = NULL, cluster_label = NULL, notify = NULL,
+  name = NULL, api_token = NULL)
 }
 \arguments{
 \item{query}{A String}

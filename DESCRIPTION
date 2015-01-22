@@ -6,8 +6,6 @@ Date: 2015-01-16
 Authors@R: c(person("Karandeep Johar", "Developer", role = c("aut","cre"), email = "karandeepj@qubole.com"),person("Dinesh Rathi", "Developer", role = c("aut"), email = "dineshr@qubole.com"))
 Author: Karandep Johar, with contributions from Dinesh Rathi
 Maintainer: Karandeep Johar <karandeepj@qubole.com>
-Depends : R(>= 3.1.2), rPython (>= 0.0-5)
+Depends: R(>= 3.1.2), rPython (>= 0.0-5)
 Description: A wrapper function written in R and Python to launch a hivequery on qds using qds python sdk
-License: Apache
-LazyData: true
-    
+License: Apache License (== 2.0) + file LICENSE    
