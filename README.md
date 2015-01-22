@@ -5,10 +5,12 @@ A python and R wrapper code for launching HiveQueries using qds-sdk-py
 Requires
 --------
 [qds-python-sdk] ( https://github.com/qubole/qds-sdk-py)
+
     cd /path/to/qds-python-sdk/directory 
     sudo python setup.py install
 
 [rPython] (http://cran.r-project.org/web/packages/rPython/)
+
     install.packages("rPython")
 
 Installation:
