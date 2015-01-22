@@ -31,6 +31,7 @@ Optional:
 ---------
 To change default qds env variables
 In shell
+
     $ export QDS_API_TOKEN = xxyyzz
     $ export QDS_API_URL = xyz/xyz
     $ export QDS_API_VERSION = 1.2
