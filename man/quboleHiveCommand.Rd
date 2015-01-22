@@ -9,13 +9,13 @@ quboleHiveCommand(...)
 \arguments{
 \item{query}{A String}
 
-\item{script_location}{A String}
+\item{poll_interval}{A Number}
+
+\item{sample_size}{A Number}
 
 \item{macros}{A String}
 
 \item{tags}{A String}
-
-\item{sample_size}{A Number}
 
 \item{cluster_label}{A String}
 
@@ -23,19 +23,7 @@ quboleHiveCommand(...)
 
 \item{name}{A String}
 
-\item{poll_interval}{A Number}
-
 \item{api_token}{A String}
-
-\item{api_url}{A String}
-
-\item{api_version}{A Number}
-
-\item{skip_ssl_cert_check}{A Boolean}
-
-\item{verbose}{A Boolean}
-
-\item{chatty}{A Boolean}
 }
 \value{
 the results of the query

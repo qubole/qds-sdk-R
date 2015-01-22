@@ -1,7 +1,7 @@
-Package: qdssdkr
+Package: qds.sdk.R
 Type: Package
 Title: contains wrapper functions in R and Python to call qds-python-sdk
-Version: 1.0
+Version: 1.1
 Date: 2015-01-16
 Authors@R: c(person("Karandeep Johar", "Developer", role = c("aut","cre"), email = "karandeepj@qubole.com"),person("Dinesh Rathi", "Developer", role = c("aut"), email = "dineshr@qubole.com"))
 Author: Karandep Johar, with contributions from Dinesh Rathi

@@ -12,7 +12,7 @@ import shlex
 import os
 log = logging.getLogger("hivecommand")
 
-usage_str = ("Usage: hivecommand <api_token> <output-path-in-s3>")
+
 
 def usage(code=1):
     sys.stderr.write(usage_str + "\n")
@@ -42,13 +42,25 @@ def hivecommand( queryString):
     
     return results 
 
-def hivecommand_from_r(query=None, script_location=None, macros=None , tags=None, sample_size=None, cluster_label=None, notify=None, name=None,api_token = os.getenv('QDS_API_TOKEN'), api_url = os.getenv('QDS_API_URL'), poll_interval = os.getenv('QDS_POLL_INTERVAL'), api_version = os.getenv('QDS_API_VERSION'), skip_ssl_cert_check = False, verbose = False, chatty = False):
+def hivecommand_from_r(query=None, poll_interval = os.getenv('QDS_POLL_INTERVAL'), sample_size=None, macros=None , tags=None, cluster_label=None, notify=None, name=None, api_token = os.getenv('QDS_API_TOKEN') ):
+    #get value of api_url,
+    api_url = os.getenv('QDS_API_URL')
+    api_version = os.getenv('QDS_API_VERSION')
+     
+    
+    chatty = False
+    verbose = False
+    
+    skip_ssl_cert_check = None
+    api_url = None
+    api_version = None
+
     queryString = ""
     #reconstruct the queryString for to be parsed by hivecommand.parse function
     if query is not None:
         queryString += " --query '%s' "%str(query)
-    if script_location is not None:
-        queryString += " -f '%s' "%str(script_location)
+    #if script_location is not None:
+    #    queryString += " -f '%s' "%str(script_location)
     if macros is not None:
         queryString += " --macros '%s' "%str(macros)
     if tags is not None:
@@ -66,6 +78,8 @@ def hivecommand_from_r(query=None, script_location=None, macros=None , tags=None
     #query = str(query) #because r passes string as unicode
     #arguments = str("")
     #api_token = str(api_token)
+    
+    
     if chatty:
         logging.basicConfig(level=logging.DEBUG)
     elif verbose:
@@ -104,7 +118,7 @@ def hivecommand_from_r(query=None, script_location=None, macros=None , tags=None
         
     except qds_sdk.exception.ParseError as e:
         sys.stderr.write("Error: %s\n" % str(e))
-        sys.stderr.write("Usage: %s\n" % e.usage)
+        #sys.stderr.write("Usage: %s\n" % e.usage)
         
     except Exception:
         traceback.print_exc(file=sys.stderr)
