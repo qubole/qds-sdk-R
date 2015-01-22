@@ -1,5 +1,5 @@
 # Load/run the main Python script
-#'  calls hivecommand_from_r and return the result
+#'  calls hivecommand_from_r  in /exec/r-python.py and return the result
 #'  
 #'  \url{http://qubole.com}
 #'  \email{karandeepj@@qubole.com}
@@ -15,7 +15,7 @@
 #'  @param api_token A String
 #'  @return the results of the query
 #'  @examples
-#'  quboleHiveCommand("show tables")
+#'  \dontrun{results = quboleHiveCommand("show tables", poll_interval = 5)}
 #'  @export
 quboleHiveCommand<-function(query = NULL, poll_interval = NULL, sample_size = NULL, macros = NULL, tags =NULL, cluster_label = NULL, notify = NULL, name = NULL, api_token = NULL){ 
     

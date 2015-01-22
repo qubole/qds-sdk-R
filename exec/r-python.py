@@ -106,7 +106,7 @@ def hivecommand_from_r(query = None, poll_interval = None , sample_size = None, 
         skip_ssl_cert_check = False
     elif skip_ssl_cert_check:
         log.warn("Insecure mode enabled: skipping SSL cert verification\n")
-    
+    print api_url+api_version 
     Qubole.configure(api_token=api_token,
             api_url=api_url,
             version=api_version,

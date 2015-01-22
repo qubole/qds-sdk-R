@@ -2,7 +2,7 @@
 % Please edit documentation in R/quboleHiveCommand.R
 \name{quboleHiveCommand}
 \alias{quboleHiveCommand}
-\title{calls hivecommand_from_r and return the result}
+\title{calls hivecommand_from_r  in /exec/r-python.py and return the result}
 \usage{
 quboleHiveCommand(query = NULL, poll_interval = NULL, sample_size = NULL,
   macros = NULL, tags = NULL, cluster_label = NULL, notify = NULL,
@@ -35,6 +35,6 @@ the results of the query
  \email{karandeepj@qubole.com}
 }
 \examples{
-quboleHiveCommand("show tables")
+\dontrun{results = quboleHiveCommand("show tables", poll_interval = 5)}
 }
 
