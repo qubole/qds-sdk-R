@@ -24,7 +24,7 @@ Usage:
 ------
 In R
 
-    library(qdssdkr)
+    library(qds.sdk.R)
     results<-qds.sdk.R::quboleHiveCommand(query="sample query")
 
 Optional:
