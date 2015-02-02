@@ -35,3 +35,5 @@ In shell
     $ export QDS_API_TOKEN = xxyyzz
     $ export QDS_API_URL = xyz/xyz
     $ export QDS_API_VERSION = 1.2
+
+Additionally you can also use sampling in Hive. For further details read this [page] (https://cwiki.apache.org/confluence/display/Hive/LanguageManual+Sampling).
