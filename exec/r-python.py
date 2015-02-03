@@ -43,8 +43,7 @@ def hivecommand( queryString):
     return results 
 
     #get value of api_url,
-def hivecommand_from_r(query = None, poll_interval = None , sample_size = None, macros = None , tags = None, cluster_label = None, notify = None, name = None, api_token = None ):
-    
+def hivecommand_from_r(query = None, poll_interval = None , sample_size = None, macros = None , tags = None, cluster_label = None, notify = None, name = None, api_token = None ): 
     api_url = os.getenv('QDS_API_URL')
     api_version = os.getenv('QDS_API_VERSION')
     if poll_interval is None:
@@ -106,7 +105,7 @@ def hivecommand_from_r(query = None, poll_interval = None , sample_size = None, 
         skip_ssl_cert_check = False
     elif skip_ssl_cert_check:
         log.warn("Insecure mode enabled: skipping SSL cert verification\n")
-    print api_url+api_version 
+     
     Qubole.configure(api_token=api_token,
             api_url=api_url,
             version=api_version,

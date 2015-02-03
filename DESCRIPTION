@@ -5,7 +5,7 @@ Version: 0.1
 Date: 2015-02-03
 OS_type: unix
 Authors@R: c(person("Qubole SDK","Developer", role = c("aut","cre"), email = "sdk-dev@qubole.com"))
-Maintainer: Qubole SDK Developer <karandeepj@qubole.com>
+Maintainer: Qubole SDK Developer <sdk-dev@qubole.com>
 Depends: R(>= 3.1.2), rPython (>= 0.0-5)
 Description: Qubole is a Big Data As a Service company. This wrapper function written in R and Python can be used to access their flagship product Qubole Data Service (qds) to launch a Hive Command (see http://en.wikipedia.org/wiki/Apache_Hive) . It uses QDS Python SDK to accomplish this which instead uses rest api to communicate with Qubole (for further information see https://github.com/qubole/qds-sdk-py) . Before starting Set token variable to your qubole authentication token (which you can get from https://api.qubole.com/v2/control-panel#manage-accounts). 
 URL: http://www.qubole.com, http://docs.qubole.com/en/latest/quick-start-guide/index.html, http://github.com/KarandeepJohar/qds.sdk.R, http://github.com/qubole/qds-sdk-py, 

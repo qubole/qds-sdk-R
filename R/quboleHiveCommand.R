@@ -19,7 +19,7 @@
 #'  @export
 quboleHiveCommand<-function(query = NULL, poll_interval = NULL, sample_size = NULL, macros = NULL, tags =NULL, cluster_label = NULL, notify = NULL, name = NULL, api_token = NULL){ 
     
-    rPython::python.load(file.path(find.package("qds.sdk.R"),"exec","r-python.py" ))
+    rPython::python.load(file.path(find.package("qds"),"exec","r-python.py" ))
     
     
     
