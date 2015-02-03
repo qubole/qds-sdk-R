@@ -1,8 +1,9 @@
-Package: qds.sdk.R
+Package: qds
 Type: Package
 Title: R extension to execute Hive Commands through Qubole Data Service Python SDK.
-Version: 1.1-1
-Date: 2015-01-16
+Version: 0.1
+Date: 2015-02-03
+OS_type: unix
 Authors@R: c(person("Karandeep","Johar", role = c("aut","cre"), email = "karandeepj@qubole.com"),person("Dinesh", "Rathi", role = c("aut"), email = "dineshr@qubole.com"))
 Maintainer: Karandeep Johar <karandeepj@qubole.com>
 Depends: R(>= 3.1.2), rPython (>= 0.0-5)
