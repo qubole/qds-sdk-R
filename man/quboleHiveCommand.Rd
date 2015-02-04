@@ -32,7 +32,7 @@ the results of the query
 }
 \description{
 \url{http://qubole.com}
- \email{karandeepj@qubole.com}
+ \email{sdk-dev@qubole.com}
 }
 \examples{
 \dontrun{results = quboleHiveCommand("show tables", poll_interval = 5)}

@@ -37,8 +37,8 @@ In Shell
 
 In R
 
-    library(qds.sdk.R)
-    results<-qds.sdk.R::quboleHiveCommand(query="show tables")
+    library(qds)
+    results<-qds::quboleHiveCommand(query="show tables")
 
 Optional:
 ---------

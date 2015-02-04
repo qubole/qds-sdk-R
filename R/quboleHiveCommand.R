@@ -2,7 +2,7 @@
 #'  calls hivecommand_from_r  in /exec/r-python.py and return the result
 #'  
 #'  \url{http://qubole.com}
-#'  \email{karandeepj@@qubole.com}
+#'  \email{sdk-dev@@qubole.com}
 #'  @import rPython
 #'  @param query A String
 #'  @param poll_interval A Number
