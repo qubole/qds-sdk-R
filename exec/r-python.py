@@ -56,7 +56,6 @@ def hivecommand_from_r(query = None, poll_interval = None , sample_size = None, 
     verbose = False
     
     skip_ssl_cert_check = None
-    api_url = None
     api_version = None
 
     queryString = ""

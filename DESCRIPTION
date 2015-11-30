@@ -1,6 +1,6 @@
 Package: qds
 Type: Package
-Title: R extension to execute Hive Commands through Qubole Data Service Python SDK.
+Title: R extension to execute Hive,Presto,Spark Commands through Qubole Data Service Python SDK.
 Version: 0.1
 Date: 2015-02-03
 OS_type: unix

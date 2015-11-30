@@ -1,6 +1,6 @@
 qds-sdk-R
 =========
-R wrapper code for launching HiveQueries using qds-sdk-py.
+R wrapper code for launching Hive, Spark, Presto queries using qds-sdk-py.
 
 
 Requires
@@ -39,6 +39,46 @@ In R
 
     library(qds)
     results<-qds::quboleHiveCommand(query="show tables")
+    
+Or
+    
+    library(qds)
+    
+    hive<-HiveCommand$new() 
+    Or 
+    hive<-HiveCommand$new(<apitoken>) 
+    Or
+    hive<-HiveCommand$new(<apitoken>,<pollinterval>)
+    
+    For Spark:
+    spark<-SparkCommand$new()
+    sparkCmdId<-spark$submit(sql="select * from default_qubole_memetracker limit 10")
+    
+
+Asynchronous 
+
+    commandId<-hive$submit(query = "show tables")
+    result<-hive$getresult(commandId)
+
+Cancel
+
+    hive$cancel(<commandId>)
+
+Synchronous
+
+    result<-hive$run(query = "show tables")
+
+For results
+
+    hive$getresult(<commandId>)
+    
+For logs
+
+    hive$getlog(<commandId>)
+    
+To display command object
+
+    hive$check(<commandId>)
 
 Optional:
 ---------
