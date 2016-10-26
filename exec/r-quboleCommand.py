@@ -64,6 +64,7 @@ def getlog(commandId):
 #Hive
 def hivecommand(query=None, macros=None, tags=None, sample_size=None, cluster_label=None,
                 notify=None, name=None, script_location=None, print_logs=None, command_type="submit"):
+    
     command = ""
     try:
         command = HiveCommand.create(query=query, macros=macros, tags=tags, sample_size=sample_size,
@@ -79,7 +80,7 @@ def hivecommand(query=None, macros=None, tags=None, sample_size=None, cluster_la
         sys.stderr.write("Error: %s\n" % str(e))
     except Exception:
         traceback.print_exc(file=sys.stderr)
-    if command_type is "run":
+    if command_type == "run":
         while not Command.is_done(command.status):
             time.sleep(Qubole.poll_interval)
             command = Command.find(command.id)
@@ -104,7 +105,7 @@ def prestocommand(query=None, script_location=None, macros=None, tags=None, clus
         sys.stderr.write("Error: %s\n" % str(e))
     except Exception:
         traceback.print_exc(file=sys.stderr)
-    if command_type is "run":
+    if command_type == "run":
         while not Command.is_done(command.status):
             time.sleep(Qubole.poll_interval)
             command = Command.find(command.id)
@@ -132,7 +133,7 @@ def sparkcommand(program=None, cmdline=None, sql=None, script_location=None, mac
         sys.stderr.write("Error: %s\n" % str(e))
     except Exception:
         traceback.print_exc(file=sys.stderr)
-    if command_type is "run":
+    if command_type == "run":
         while not Command.is_done(command.status):
             time.sleep(Qubole.poll_interval)
             command = Command.find(command.id)
